@@ -9,7 +9,7 @@ class Element
    *
    * @var undefined
    */
-  private $builder;
+  public $builder;
 
   /**
    * br
