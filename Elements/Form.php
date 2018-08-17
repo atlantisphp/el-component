@@ -2,21 +2,10 @@
 
 namespace AtlantisPHP\ElComponent\Elements;
 
-class Form
+use AtlantisPHP\ElComponent\Elements\Element;
+
+class Form extends Element
 {
-  /**
-   * $builder
-   *
-   * @var undefined
-   */
-  private $builder;
-
-  /**
-   * $action
-   *
-   * @var undefined
-   */
-
   /**
    * $action
    *
@@ -24,6 +13,12 @@ class Form
    */
   private $action;
 
+  /**
+   * text
+   *
+   * @param mixed array
+   * @return void
+   */
   public function text(array $attributes = []) : object
   {
     $input = 'input type="text"';
@@ -78,23 +73,6 @@ class Form
   public function action(string $endpoint) : object
   {
     $this->action = $endpoint;
-    return $this;
-  }
-
-  /**
-   * br
-   *
-   * @param mixed array
-   * @return object
-   */
-  public function br(array $attributes = []) : object
-  {
-    $input = 'br';
-    foreach ($attributes as $key => $value) {
-      $input = $input . ' ' . $key . '="' . $value . '" ';
-    }
-
-    $this->builder = $this->builder . "<$input >";
     return $this;
   }
 
