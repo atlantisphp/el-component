@@ -1,2 +1,2 @@
-# el-component
+# El-Atlantis
 HTML component for PHP
