@@ -9,8 +9,6 @@ HTML component for PHP
 
 require_once __DIR__.'/../vendor/autoload.php';
 
-use AtlantisPHP\ElComponent\Html;
-
 el('form')
   ->action('/register')
   ->text([
